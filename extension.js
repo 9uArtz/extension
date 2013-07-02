@@ -55,4 +55,11 @@
             }
         },
     });
+    Object.defineProperties(String.prototype, {
+        replaceAll : {
+            value : function(from, to) {
+                return this.split(from).join(to);
+            }
+        }
+    });
 })();
