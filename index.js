@@ -7,6 +7,7 @@
                 }
                 return this;
             },
+            writable: true,
         },
         map : {
             value: function(callback) {
@@ -14,7 +15,8 @@
                     this[key] = callback(this[key], key);
                 }
                 return this;
-            }
+            },
+            writable: true,
         },
         collect : {
             value: function(callback) {
@@ -32,7 +34,8 @@
                     ret = callback(this[key], ret);
                 }
                 return ret;
-            }
+            },
+            writable: true,
         },
         has : {
             value: function(needle) {
@@ -42,7 +45,8 @@
                    }
                }
                return false;
-            }
+            },
+            writable: true,
         },
         hasKey : {
             value: function(needle) {
@@ -52,14 +56,16 @@
         toJson : {
             value : function() {
                 return JSON.stringify(this);
-            }
+            },
+            writable: true,
         },
     });
     Object.defineProperties(String.prototype, {
         replaceAll : {
             value : function(from, to) {
                 return this.split(from).join(to);
-            }
+            },
+            writable: true,
         }
     });
 })();
