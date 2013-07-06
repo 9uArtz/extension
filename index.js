@@ -50,7 +50,7 @@
         },
         hasKey : {
             value: function(needle) {
-                return (this[needle] != undefined);
+                return (this[needle] !== undefined);
             }
         },
         toJson : {
